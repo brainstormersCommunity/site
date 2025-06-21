@@ -2,287 +2,343 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brainstormers</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brainstormers</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Matangi:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Matangi:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Matangi:wght@300..900&family=Varela&display=swap"
-        rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Matangi', sans-serif;
+    }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Matangi', sans-serif;
-        }
+    body,
+    html {
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      background-color: #f5f5f5;
+    }
 
-        body,
-        html {
-            opacity: 100%;
-            height: 100%;
-            width: 100%;
-            overflow-x: hidden;
-            background-color: #f5f5f5;
-        }
+    .split-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+    }
 
-        .split-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            height: 100%;
-            width: 100%;
-            z-index: 0;
-        }
+    .bg1 {
+      width: 50%;
+      background: #F5F5DC;
+    }
 
-        .bg1 {
-            width: 50%;
-            background: #F5F5DC;
-        }
+    .bg2 {
+      width: 50%;
+      background: #1a1a1a;
+    }
 
-        .bg2 {
-            width: 50%;
-            background: #1a1a1a;
-        }
+    .content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .content {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    .card {
+      background: white;
+      width: 90%;
+      max-width: 1100px;
+      margin: 3rem auto 4rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      padding: 2.5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .card {
-            background: white;
-            width: 90%;
-            max-width: 1100px;
-            margin: 3rem auto 4rem;
-            border-radius: 1rem;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-            padding: 2.5rem 3rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow-y: auto;
-        }
+    .logo-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(100, 100, 100, 0.2), rgba(150, 150, 150, 0.3));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
 
-        .logo-circle {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(100, 100, 100, 0.2), rgba(150, 150, 150, 0.3));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
+    .logo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .logo-circle img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .brand-name {
+      margin-top: 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
 
-        .brand-name {
-            margin-top: 1rem;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #333;
-            text-align: center;
-        }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+      font-weight: 900;
+      font-family: "Varela", sans-serif;
+      margin: 2rem 0;
+      font-size: 1rem;
+    }
 
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            font-weight: 900;
-            font-family: "Varela", sans-serif;
-            margin: 2rem 0;
-            font-size: 1.2rem;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      padding: 0.4rem 1.2rem;
+      border-radius: 8px;
+      background-color: #eee;
+      border: none;
+      transition: all 0.3s ease;
+      width: 15%;
+      text-align: center;
+    }
 
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
+    .nav-links a:hover {
+      background-color: #e0e0e0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-        .nav-links a:hover {
-            background-color: #eee;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+    .nav-links a:active {
+      background-color: #ddd;
+      transform: scale(0.98);
+    }
 
-        .nav-links a:active {
-            background-color: #ddd;
-            transform: scale(0.98);
-        }
+    .community-section,
+    .about-section {
+      margin-top: 2rem;
+      width: 100%;
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-        .community-section,
-        .about-section {
-            margin-top: 2rem;
-            width: 100%;
-            background: #f9f9f9;
-            padding: 2rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+    .community-section h2,
+    .about-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
 
-        .community-section h2,
-        .about-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
+    .community-section p,
+    .about-section p {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      font-family: "Varela", "Arial";
+    }
 
-        .community-section p,
-        .about-section p {
-            font-size: 1rem;
-            color: #444;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-            font-family: "Verela", "Arial";
-        }
+    .community-section a button {
+      padding: 0.75rem 1.5rem;
+      background: #815355;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
 
-        .community-section a button {
-            padding: 0.75rem 1.5rem;
-            background: #815355;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
+    .community-section a button:hover {
+      background: #6b4446;
+    }
 
-        .community-section a button:hover {
-            background: #6b4446;
-        }
+    .about-section ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 auto;
+      max-width: 700px;
+      text-align: center;
+    }
 
-        @media (max-width: 768px) {
-            .card {
-                padding: 1.5rem 1.2rem;
-            }
+    .about-section li {
+      margin-bottom: 0.5rem;
+    }
 
-            .brand-name {
-                font-size: 1.5rem;
-            }
+    .footer {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem;
+    }
 
-            .nav-links {
-                flex-direction: column;
-                align-items: center;
-                font-size: 1rem;
-                gap: 0.5rem;
-            }
+    .footer p {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #1a1a1a;
+    }
 
-            .community-section h2,
-            .about-section h2 {
-                font-size: 1.5rem;
-            }
+    /* Scroll Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
 
-            .community-section p,
-            .about-section p {
-                font-size: 0.95rem;
-            }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-            .community-section a button {
-                font-size: 0.9rem;
-                padding: 0.6rem 1.2rem;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .card {
+        padding: 1.5rem 1.2rem;
+      }
+
+      .brand-name {
+        font-size: 1.5rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.95rem;
+        gap: 0.5rem;
+      }
+
+      .nav-links a {
+        width: 90%;
+        text-align: center;
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
+      }
+
+      .community-section h2,
+      .about-section h2 {
+        font-size: 1.5rem;
+      }
+
+      .community-section p,
+      .about-section p {
+        font-size: 0.95rem;
+      }
+
+      .community-section a button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+      }
+
+      .about-section ul {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="split-bg">
-        <div class="bg1"></div>
-        <div class="bg2"></div>
+  <div class="split-bg">
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+  </div>
+
+  <div class="content">
+    <div class="card reveal">
+      <div class="logo-circle">
+        <img src="20250620_000251.png" alt="logo">
+      </div>
+      <div class="brand-name">THE BRAINSTORMERS</div>
+
+      <div class="nav-links">
+        <a href="jee.html">JEE</a>
+        <a href="neet.html">NEET</a>
+        <a href="isc.html">ISC</a>
+        <a href="cbse.html">CBSE</a>
+      </div>
+
+      <div class="community-section reveal">
+        <h2>Join Our WhatsApp Community</h2>
+        <p>Welcome to Brainstormer Hub, a community dedicated to academic excellence and collaborative learning! This
+          is a space where students from various boards and competitive exams—ISC, CBSE, JEE, and NEET—come together to
+          share knowledge, solve doubts, and stay motivated.</p>
+        <p><strong style="font-size: 20px;">Our Groups:</strong><br>📚 ISC11 Brainstormer – For ISC Class 11 discussions
+          and study support.<br>🩺 NEET Brainstormer – Dedicated to NEET aspirants.<br>🧮 JEE Brainstormer – For
+          engineering aspirants.<br>📖 CBSE Brainstormer – For CBSE academic support.</p>
+        <p><strong style="font-size: 20px;">Community Rules:</strong><br>🚫 No Spamming<br>📚 Respectful Learning<br>🤝
+          Help Each Other<br>⚠ Strict Moderation</p>
+        <p>Let’s learn, brainstorm, and achieve success together! 🚀📖💡<br><br><strong><em>— Divyansh Yadav
+              [Owner]</em></strong></p>
+        <a href="https://chat.whatsapp.com/BOFy174lrhq9RHBzWUxIgf" target="_blank"><button>Join Now</button></a>
+      </div>
+
+      <div class="about-section reveal">
+        <h2>About Us</h2>
+        <p><strong>The Brainstormers</strong> began on <strong>5th February</strong> as a focused, disciplined study
+          group for ICSE Class 10 students, founded by <strong>Divyansh Yadav</strong>.</p>
+        <p>Our mission: <strong><em>"No one should feel alone in their academic journey."</em></strong></p>
+        <p><strong>We support:</strong></p>
+        <ul>
+          <li>📘 ISC 11 Brainstormers</li>
+          <li>📗 CBSE 11 Brainstormers</li>
+          <li>📕 JEE Brainstormers</li>
+          <li>📙 NEET Brainstormers</li>
+        </ul>
+        <p><strong>We promote:</strong></p>
+        <ul>
+          <li>✅ Peer-to-peer support</li>
+          <li>✅ Discipline and consistency</li>
+          <li>✅ Free access to study materials</li>
+          <li>✅ Respectful and encouraging environment</li>
+        </ul>
+        <p><strong>Our Team:</strong><br>
+          👨‍💼 Divyansh Yadav<br>
+          🧠 Om Baruah<br>
+          🔬 Shivam Gupta<br>
+          🎓 Aradhya Roy</p>
+        <p><strong><em>"We rise by lifting others."</em></strong></p>
+      </div>
+
+      <div class="footer reveal">
+        <p>&copy; 2025 The Brainstormers. All rights reserved.</p>
+      </div>
     </div>
+  </div>
 
-    <div class="content">
-        <div class="card">
-            <div class="logo-circle">
-                <img src="20250620_000251.png" alt="logo">
-            </div>
-            <div class="brand-name">THE BRAINSTORMERS</div>
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
 
-            <div class="nav-links">
-                <a href="jee.html">JEE</a>
-                <a href="neet.html">NEET</a>
-                <a href="isc.html">ISC</a>
-                <a href="cbse.html">CBSE</a>
-            </div>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
 
-            <div class="community-section">
-                <h2>Join Our WhatsApp Community</h2>
-                <p>Welcome to Brainstormer Hub, a community dedicated to academic excellence and collaborative learning!
-                    This is a space where students from various boards and competitive exams—ISC, CBSE, JEE, and
-                    NEET—come together to share knowledge, solve doubts, and stay motivated.</p>
-                <p><strong style="font-size: 20px;">Our Groups:</strong><br>📚 ISC11 Brainstormer – For ISC Class 11
-                    discussions and study support.<br>🩺 NEET Brainstormer – Dedicated to NEET aspirants.<br>🧮 JEE
-                    Brainstormer – For engineering aspirants.<br>📖 CBSE Brainstormer – For CBSE academic support.</p>
-                <p><strong style="font-size: 20px;">Community Rules:</strong><br>🚫 No Spamming<br>📚 Respectful
-                    Learning<br>🤝 Help Each Other<br>⚠ Strict Moderation</p>
-                <p>Let’s learn, brainstorm, and achieve success together! 🚀📖💡<br><br><strong><em>— Divyansh Yadav
-                            [Owner]</em></strong></p>
-                <a href="https://chat.whatsapp.com/BOFy174lrhq9RHBzWUxIgf" target="_blank"><button>Join Now</button></a>
-            </div>
+  reveals.forEach(reveal => {
+    observer.observe(reveal);
+  });
+</script>
 
-            <div class="about-section">
-                <h2>About Us</h2>
-                <p><strong>The Brainstormers</strong> began on <strong>5th February</strong> as a focused, disciplined
-                    study group for ICSE Class 10 students, founded by <strong>Divyansh Yadav</strong>. What started as
-                    a simple support group soon evolved into a growing academic community with learners from various
-                    boards and streams.</p>
-                <p>Our mission is simple yet powerful: <strong><em>"No one should feel alone in their academic
-                            journey."</em></strong></p>
-                <p>Over time, we expanded beyond Class 10 and now support students in:</p>
-                <ul style="text-align: left; margin: 0 auto; max-width: 700px;">
-                    <li>📘 <strong>ISC 11 Brainstormers</strong> – For ISC Class 11 students</li>
-                    <li>📗 <strong>CBSE 11 Brainstormers</strong> – For CBSE learners</li>
-                    <li>📕 <strong>JEE Brainstormers</strong> – Targeted at engineering aspirants</li>
-                    <li>📙 <strong>NEET Brainstormers</strong> – Focused on medical entrance prep</li>
-                </ul>
-                <p><strong style="font-size: 18px;">We promote:</strong></p>
-                <ul style="text-align: left; margin: 0 auto; max-width: 700px;">
-                    <li>✅ Peer-to-peer support</li>
-                    <li>✅ Discipline and consistency</li>
-                    <li>✅ Free access to study materials</li>
-                    <li>✅ A respectful and encouraging environment</li>
-                </ul>
-                <br>
-                <p><strong style="font-size: 18px;">Our Team:</strong><br>
-                    👨‍💼 Divyansh Yadav<br>
-                    🧠 Om Baruah<br>
-                    🔬 Shivam Gupta<br>
-                    🎓 Aradhya Roy</p>
-                <p>We believe that education thrives in collaboration. Whether you're preparing for board exams or
-                    competitive tests, The Brainstormers is here to guide, support, and grow with you.</p>
-                <strong>
-                    <p><em>"We rise by lifting others."</em> — This is the Brainstormers mindset.</p>
-                </strong>
-            </div>
-            <div style="width: 100%; text-align: center; margin-top: 2rem; padding: 1rem;">
-                <p style="font-weight: 700; font-size: 0.9rem;">
-                    <span style="color: #1a1a1a;">&copy; 2025 The Brainstormers. All
-                        rights reserved.</span>
-                </p>
-            </div>
-        </div>
-
-
-    </div>
 </body>
 
 </html>
