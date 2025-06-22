@@ -9,6 +9,9 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Matangi:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+  <!-- Add this in your <head> section if not already included -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
   <style>
     * {
@@ -261,11 +264,16 @@
       }
     }
     footer p a{
-      text-decoration: none;
+      text-decoration: underline;
       color: #aaa;
+      font-weight: 600;
     }
     footer p a:active{
-      color: #969696;
+      color: #5e5656;
+      font-weight: 800;
+    }
+    footer p a:hover{
+      color: #5e5656;
       font-weight: 800;
     }
   </style>
@@ -337,9 +345,14 @@
 
       <footer style=" color: #fff; padding: 3rem 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; font-family: 'Varela', sans-serif;">
   <div style="flex-basis: 100%; text-align: center; margin-top: 2rem; color: #aaa; font-size: 0.85rem;">
-    &copy; 2025 The Brainstormers. All rights reserved.
-    <p><a href="contact.html">Contact Us</a>
+    <strong>&copy; 2025 The Brainstormers. All rights reserved.<p>Licence Holder - <br><em>Om Baruah</em></strong></p>
+    <br>
+    <p>
+  <a href="contact.html">
+    <i class="fas fa-phone-volume"><span> </span></i> Contact Us
+  </a>
 </p>
+
   </div>
   
 </footer>
