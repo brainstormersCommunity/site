@@ -248,6 +248,56 @@
         text-align: center;
       }
     }
+    @media (max-width: 768px) {
+  .card {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    padding-bottom: 0.5rem;
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    min-width: 90px;
+    font-size: 1rem;
+    opacity: 0.5;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    background-color: #ddd;
+  }
+
+  .community-section h2,
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .community-section p,
+  .about-section p {
+    font-size: 0.95rem;
+  }
+
+  .community-section a button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .about-section ul {
+    text-align: center;
+  }
+}
+
   </style>
 </head>
 
