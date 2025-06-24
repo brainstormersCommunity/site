@@ -7,12 +7,8 @@
   <title>CBSE Resources | Brainstormers</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Matangi:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Matangi:wght@300..900&family=Varela&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
   <style>
     * {
       margin: 0;
@@ -21,8 +17,7 @@
       font-family: 'Matangi', sans-serif;
     }
 
-    body,
-    html {
+    html, body {
       height: 100%;
       width: 100%;
       overflow-x: hidden;
@@ -130,7 +125,7 @@
     .home-link {
       position: absolute;
       top: 1rem;
-      right: 1rem;
+      left: 1rem;
       font-size: 1.5rem;
       color: #333;
       text-decoration: none;
@@ -178,8 +173,25 @@
       gap: 0.5rem;
     }
 
+    .resource-box a img.logo-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
     .resource-box a i {
       color: #4a90e2;
+    }
+
+    footer {
+      color: #fff;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      font-family: 'Varela', sans-serif;
     }
 
     @media (max-width: 768px) {
@@ -213,7 +225,7 @@
 
       .home-link {
         top: 0.5rem;
-        right: 0.5rem;
+        left: 0.5rem;
         font-size: 1.2rem;
       }
 
@@ -249,43 +261,49 @@
       <div class="resources">
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/10RRaKhmm2biDcg80T32CN1z-obVR9J1E?usp=sharing" target="_blank">
+            <img src="20250620_000251.png" alt="logo" class="logo-icon" />
             <i class="fas fa-folder"></i>Chemistry
           </a>
         </div>
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/10_DywnSATkOkrL_YGYtgxTtC4rs1I3Ts?usp=sharing" target="_blank">
+            <img src="20250620_000251.png" alt="logo" class="logo-icon" />
             <i class="fas fa-folder"></i>Biology
           </a>
         </div>
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/10fGK1xIwQsKrHJlkL2x6wa3cUdbDLS10?usp=sharing" target="_blank">
+            <img src="20250620_000251.png" alt="logo" class="logo-icon" />
             <i class="fas fa-folder"></i>English
           </a>
         </div>
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/10SCcM8kOeM86-_yicwCy8t8WUWkS_sKj?usp=sharing" target="_blank">
+            <img src="20250620_000251.png" alt="logo" class="logo-icon" />
             <i class="fas fa-folder"></i>Mathematics
           </a>
         </div>
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/10Ph28gSfkVmM8__kOK6tB68f1BV9SwMY?usp=sharing" target="_blank">
+            <img src="20250620_000251.png" alt="logo" class="logo-icon" />
             <i class="fas fa-folder"></i>Physics
           </a>
         </div>
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/1-o3eLHVrDAmx3QzJ4l5VkzQK0eOyqSVR?usp=drive_link" target="_blank">
+            <img src="20250620_000251.png" alt="logo" class="logo-icon" />
             <i class="fas fa-folder"></i>CBSE Extra Storage
           </a>
         </div>
       </div>
 
-      <footer style=" color: #fff; padding: 3rem 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; font-family: 'Varela', sans-serif;">
-  <div style="flex-basis: 100%; text-align: center; margin-top: 2rem; color: #aaa; font-size: 0.85rem;">
-    <strong>&copy; 2025 The Brainstormers. All rights reserved.<p>Licence Holder - <br><em>Om Baruah</em></strong></p>
-    <br>
-  </div>
-</footer>
+      <footer>
+        <div style="flex-basis: 100%; text-align: center; margin-top: 2rem; color: #aaa; font-size: 0.85rem;">
+          <strong>&copy; 2025 The Brainstormers. All rights reserved.<p>Licence Holder - <br><em>Om Baruah</em></p></strong>
+        </div>
+      </footer>
     </div>
   </div>
 </body>
+
 </html>

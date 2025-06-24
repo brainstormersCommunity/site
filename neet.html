@@ -7,9 +7,7 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Matangi:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Matangi:wght@300..900&family=Varela&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
@@ -71,6 +69,20 @@
       position: relative;
     }
 
+    .home-link {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 1.5rem;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .home-link:hover {
+      color: #4a90e2;
+    }
+
     .logo-circle {
       width: 100px;
       height: 100px;
@@ -125,20 +137,6 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .home-link {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 1.5rem;
-      color: #333;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .home-link:hover {
-      color: #4a90e2;
-    }
-
     .resources {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -152,7 +150,6 @@
       color: #000;
       padding: 1rem;
       border-radius: 0.75rem;
-      text-align: left;
       font-family: "Varela", sans-serif;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
@@ -173,12 +170,18 @@
       font-size: 1rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
     }
 
-    .resource-box a i {
-      color: #4a90e2;
+    .resource-box a img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
     }
+    .resource-box a i {
+  color: #4a90e2;
+  font-size: 1.1rem;
+}
 
     @media (max-width: 768px) {
       .card {
@@ -211,7 +214,7 @@
 
       .home-link {
         top: 0.5rem;
-        right: 0.5rem;
+        left: 0.5rem;
         font-size: 1.2rem;
       }
 
@@ -247,52 +250,59 @@
       <div class="resources">
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/1-ra4-Hk_Su85BPvN6EdD6yFFMTBd5Lg6?usp=sharing" target="_blank">
-            <i class="fas fa-folder"></i>Physics
+            <i class="fas fa-folder"></i>
+            <img src="20250620_000251.png" alt="logo">Physics
           </a>
         </div>
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/1-sWBsjyO-Y3gAmK-SqEC10vMYBDDb0uX?usp=sharing" target="_blank">
-            <i class="fas fa-folder"></i>Chemistry
+            <i class="fas fa-folder"></i>
+            <img src="20250620_000251.png" alt="logo">Chemistry
           </a>
         </div>
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/1-u2M6KXrgudIq6f5PbHVmGGfgB-IGhnH?usp=sharing" target="_blank">
-            <i class="fas fa-folder"></i>Zoology
+            <i class="fas fa-folder"></i>
+            <img src="20250620_000251.png" alt="logo">Zoology
           </a>
         </div>
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/1-y7fB_5i6fhlDmlZ73CxMQ7UWc1-kn9J?usp=sharing" target="_blank">
-            <i class="fas fa-folder"></i>Botany
+            <i class="fas fa-folder"></i>
+            <img src="20250620_000251.png" alt="logo">Botany
           </a>
         </div>
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/1-ShLsiT33KbDBm7xp5aqTG77eAwP3K11?usp=sharing" target="_blank">
-            <i class="fas fa-folder"></i>PYQs
+            <i class="fas fa-folder"></i>
+            <img src="20250620_000251.png" alt="logo">PYQs
           </a>
         </div>
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/10DJoLK_iFCHaulUMmGxXr039YE9ITiLU?usp=sharing" target="_blank">
-            <i class="fas fa-folder"></i>Rapid Recap
+            <i class="fas fa-folder"></i>
+            <img src="20250620_000251.png" alt="logo">Rapid Recap
           </a>
         </div>
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/109ygT_oepX8dcg_oXv3PL0KYObDkq_kM?usp=sharing" target="_blank">
-            <i class="fas fa-folder"></i>Test Series
+            <i class="fas fa-folder"></i>
+            <img src="20250620_000251.png" alt="logo">Test Series
           </a>
         </div>
         <div class="resource-box">
           <a href="https://drive.google.com/drive/folders/1-hO4PjVMvsgF3lwLkc2ZdpWkojNbpxfC?usp=drive_link" target="_blank">
-            <i class="fas fa-folder"></i>NEET Extra Storage
+            <i class="fas fa-folder"></i>
+            <img src="20250620_000251.png" alt="logo">NEET Extra Storage
           </a>
         </div>
       </div>
 
-      <footer style=" color: #fff; padding: 3rem 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; font-family: 'Varela', sans-serif;">
-  <div style="flex-basis: 100%; text-align: center; margin-top: 2rem; color: #aaa; font-size: 0.85rem;">
-    <strong>&copy; 2025 The Brainstormers. All rights reserved.<p>Licence Holder - <br><em>Om Baruah</em></strong></p>
-    <br>
-  </div>
-</footer>
+      <footer style="color: #fff; padding: 3rem 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; font-family: 'Varela', sans-serif;">
+        <div style="flex-basis: 100%; text-align: center; margin-top: 2rem; color: #aaa; font-size: 0.85rem;">
+          <strong>&copy; 2025 The Brainstormers. All rights reserved.<br>Licence Holder - <br><em>Om Baruah</em></strong>
+        </div>
+      </footer>
     </div>
   </div>
 </body>
