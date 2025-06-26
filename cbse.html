@@ -156,14 +156,55 @@
     }
 
     .resource-box:nth-child(even) {
-      background: #1a1a1a;
+      background: #353535;
       color: #fff;
     }
 
     .resource-box:hover {
       transform: translateY(-5px);
     }
+          .disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: linear-gradient(to right, #f7f7f7, #eaeaea);
+  padding: 1.5rem;
+  margin-top: 2.5rem;
+  border-left: 5px solid #353535;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  font-family: 'Varela', sans-serif;
+}
 
+.disclaimer-icon {
+  font-size: 1.6rem;
+  color: #4a90e2;
+  margin-top: 3px;
+}
+
+.disclaimer-text h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.disclaimer-text p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.disclaimer-text p a {
+  color: #4a90e2;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.disclaimer-text p a:hover {
+  color: #1e70d1;
+}
     .resource-box a {
       text-decoration: none;
       color: inherit;
@@ -232,7 +273,20 @@
       .resources {
         grid-template-columns: 1fr;
       }
+      .disclaimer{
+        font-size: 0.9rem;
+      }
     }
+    @media (max-width: 768px) {
+  .disclaimer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .disclaimer-icon {
+    margin-top: 0;
+  }
+}
   </style>
 </head>
 
@@ -296,7 +350,19 @@
           </a>
         </div>
       </div>
-
+        <div class="disclaimer">
+  <div class="disclaimer-icon">
+    <i class="fas fa-circle-info"></i>
+  </div>
+  <div class="disclaimer-text">
+    <h3>Disclaimer</h3>
+    <p>
+      The ISC PDFs and files available on our website may or may not be owned by us.
+      We do not claim ownership unless explicitly stated. For more information, please refer to our
+      <a href="privacy.html" target="_blank">Privacy Policy</a>.
+    </p>
+  </div>
+</div>
       <footer>
         <div style="flex-basis: 100%; text-align: center; margin-top: 2rem; color: #aaa; font-size: 0.85rem;">
           <strong>&copy; 2025 The Brainstormers. All rights reserved.<p>Licence Holder - <br><em>Om Baruah</em></p></strong>
